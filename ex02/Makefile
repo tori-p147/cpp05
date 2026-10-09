@@ -1,4 +1,4 @@
-NAME = bureaucrat
+NAME = forms
 
 SRC_DIR = src
 INC_DIR = includes
@@ -11,7 +11,8 @@ INCLUDES = -I$(INC_DIR)
 
 SRC_FILES = main.cpp \
 		Bureaucrat.cpp \
-		AForm.cpp
+		AForm.cpp \
+		ShrubberyCreationForm.cpp \
 		
 SOURCES = $(addprefix $(SRC_DIR)/, $(SRC_FILES))
 

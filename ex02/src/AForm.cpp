@@ -1,11 +1,6 @@
 #include "AForm.hpp"
 #include "Bureaucrat.hpp"
 
-AForm::AForm()
-{
-
-}
-
 AForm::GradeTooHighException::GradeTooHighException(const std::string &msg)
 {
 	_msg = msg;
@@ -59,4 +54,24 @@ const char *AForm::GradeTooHighException::what() const throw()
 const char *AForm::GradeTooLowException::what() const throw()
 {
 	return _msg.c_str();
+}
+
+void AForm::setName(std::string &target)
+{
+	_name = target;
+}
+
+void AForm::setGradeRequiredToSign(int grade)
+{
+	_gradeRequiredToSign = grade;
+}
+
+void AForm::setGradeRequiredToExecute(int grade)
+{
+	_gradeRequiredToExecute = grade;
+}
+
+void AForm::setIsSigned(bool isSigned)
+{
+	_isSigned = isSigned;
 }

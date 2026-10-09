@@ -13,14 +13,20 @@ class AForm {
 		int _gradeRequiredToSign;
 		int _gradeRequiredToExecute;
 		
-	public:
-		AForm();
+	protected:
 		virtual ~AForm();
 		std::string const & getName() const;
 		int getGradeRequiredToSign() const;
 		int getGradeRequiredToExecute() const;
 		bool getIsSigned() const;
+
+		void setName(std::string &target);
+		void setGradeRequiredToSign(int grade);
+		void setGradeRequiredToExecute(int grade);
+		void setIsSigned(bool isSigned);
+
 		virtual void beSigned(Bureaucrat &b) = 0;
+		virtual void execute(Bureaucrat const & executor) const = 0;
 
 	class GradeTooHighException : public std::exception
     {
