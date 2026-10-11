@@ -18,17 +18,17 @@ void ShrubberyCreationForm::beSigned(Bureaucrat &b)
 	if (b.getGrade() <= getGradeRequiredToSign())
 	{
 		setIsSigned(true);
-		std::cout << this->getName() << " signed " << this->getName() << std::endl;
+		std::cout << b.getName() << " signed " << this->getName() << std::endl;
 	}
 	else if (b.getGrade() > getGradeRequiredToSign())
-		throw GradeTooLowException("Grade too low");
+		throw GradeTooLowException(b.getName() + " couldn’t sign " + this->getName() + " because grade too low");
 }
 
 void ShrubberyCreationForm::execute(Bureaucrat const &executor) const
 {
 	if (getIsSigned() && executor.getGrade() <= getGradeRequiredToExecute())
 	{
-		std::cout << "scf was executed" << std::endl;
+		std::cout << this->getName() << " was executed" << std::endl;
 		std::string filename = getName() + "_shrubbery";
 		const char *command = "tree";
 		std::ofstream file(filename.c_str());
@@ -41,5 +41,6 @@ void ShrubberyCreationForm::execute(Bureaucrat const &executor) const
 		file << "/ \\/ \\ / \\\n";
 		file << " || || ||\n";
 		file.close();
-	}
+	} else
+		throw GradeTooLowException(executor.getName() + " couldn’t execute " + this->getName() + " because grade too low");
 }

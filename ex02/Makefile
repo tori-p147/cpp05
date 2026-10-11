@@ -13,6 +13,8 @@ SRC_FILES = main.cpp \
 		Bureaucrat.cpp \
 		AForm.cpp \
 		ShrubberyCreationForm.cpp \
+		RobotomyRequestForm.cpp \
+		PresidentialPardonForm.cpp
 		
 SOURCES = $(addprefix $(SRC_DIR)/, $(SRC_FILES))
 
