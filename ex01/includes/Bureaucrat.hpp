@@ -10,7 +10,7 @@ class Form;
 class Bureaucrat {
 	
 	private:
-		const std::string _name = "Nikolay";
+		const std::string _name;
 		int _grade;
 	public:
 		Bureaucrat();

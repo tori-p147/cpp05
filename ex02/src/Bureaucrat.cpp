@@ -1,8 +1,7 @@
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat(int grade)
+Bureaucrat::Bureaucrat(int grade) : _name("Nikolay"), _grade(grade)
 {
-	_grade = grade;
 }
 
 Bureaucrat::GradeTooHighException::GradeTooHighException(const std::string &msg)

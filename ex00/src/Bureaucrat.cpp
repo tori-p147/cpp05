@@ -1,8 +1,7 @@
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat()
+Bureaucrat::Bureaucrat() : _name("Nikolay")
 {
-
 }
 
 Bureaucrat::GradeTooHighException::GradeTooHighException(const std::string &msg)

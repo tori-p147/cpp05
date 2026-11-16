@@ -18,11 +18,11 @@ SRC_FILES = main.cpp \
 		
 SOURCES = $(addprefix $(SRC_DIR)/, $(SRC_FILES))
 
-OBJS = $(patsubst $(SRC_DIR)/%.c, $(BLD_DIR)/%.o,$(SOURCES))
+OBJS = $(patsubst $(SRC_DIR)/%.cpp, $(BLD_DIR)/%.o,$(SOURCES))
 
 all: $(NAME)
 
-$(BLD_DIR)/%.o: $(SRC_DIR)/%.c | $(BLD_DIR)
+$(BLD_DIR)/%.o: $(SRC_DIR)/%.cpp | $(BLD_DIR)
 	$(CXX) $(CXXFLAGS) $(INCLUDES) -c $< -o $@
 
 $(BLD_DIR):

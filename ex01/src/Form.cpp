@@ -1,7 +1,7 @@
 #include "Form.hpp"
 #include "Bureaucrat.hpp"
 
-Form::Form()
+Form::Form() : _name("Something form"), _gradeRequiredToSign(100), _gradeRequiredToExecute(50)
 {
 	_isSigned = false;
 }
