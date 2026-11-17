@@ -30,7 +30,6 @@ void ShrubberyCreationForm::execute(Bureaucrat const &executor) const
 	{
 		std::cout << this->getName() << " was executed" << std::endl;
 		std::string filename = getName() + "_shrubbery";
-		const char *command = "tree";
 		std::ofstream file(filename.c_str());
 		if (!file.is_open())
 			return ;

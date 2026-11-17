@@ -1,7 +1,6 @@
 #ifndef SCF_HPP
 #define SCF_HPP
 
-#include <array>
 #include <memory>
 #include <fstream>
 #include <cstdio>

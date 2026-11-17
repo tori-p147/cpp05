@@ -33,9 +33,11 @@ $(NAME): $(OBJS)
 
 clean:
 	@$(RM) $(BLD_DIR)
+	@$(RM) *_shrubbery
 
 fclean:
 	@$(RM) $(BLD_DIR) $(NAME)
+	@$(RM) *_shrubbery
 
 re: fclean all
 
